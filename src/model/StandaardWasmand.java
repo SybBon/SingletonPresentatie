@@ -2,15 +2,17 @@ package model;
 
 import java.util.ArrayList;
 
+
+
 public class StandaardWasmand {
 
     private String wasmandNaam;
+
     private ArrayList<String> kledingstukken = new ArrayList<>();
 
     public StandaardWasmand(String wasmandNaam) {
         this.wasmandNaam = wasmandNaam;
     }
-
     // doe was bij de was
     public void voegToe(String kledingstuk) {
         kledingstukken.add(kledingstuk);

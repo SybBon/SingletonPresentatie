@@ -17,20 +17,16 @@ public class StandaardWasmandController {
 
             System.out.print("Wasmand: ");
             String naam = toetsenbord.next();
-
             StandaardWasmand wasmand = wasmanden.get(naam);
-            if (wasmand == null) {
-                wasmand = new StandaardWasmand(naam);
-                wasmanden.put(naam, wasmand);
-            }
+            if (wasmand == null) {wasmand = new StandaardWasmand(naam); wasmanden.put(naam, wasmand);}
+
             System.out.print("Kledingstuk: ");
             String kledingstuk = toetsenbord.next();
 
             wasmand.voegToe(kledingstuk);
         }
-
-        System.out.println("");
-        System.out.println("\nOverzicht van alle wasmanden:");
+        System.out.println();
+        System.out.println("Overzicht van de was:");
         for (StandaardWasmand mand : wasmanden.values()) {
             System.out.print(mand.getWasmandNaam() + ": ");
             mand.toonInhoud();

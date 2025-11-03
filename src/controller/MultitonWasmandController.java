@@ -1,12 +1,12 @@
 package controller;
 
-import model.SingletonWasmand;
+import model.MultitonWasmand;
 
 import java.util.Scanner;
 
 
 
-public class SingletonWasmandController {
+public class MultitonWasmandController {
     public static void main(String[] args) {
 
         Scanner toetsenbord = new Scanner(System.in);
@@ -22,11 +22,12 @@ public class SingletonWasmandController {
 
             System.out.print("Kledingstuk: ");
             String kledingstuk = toetsenbord.next();
-            SingletonWasmand wasmand = SingletonWasmand.getInstance(naam);
+            MultitonWasmand wasmand = MultitonWasmand.getInstance(naam);
             wasmand.voegToe(kledingstuk);
         }
         System.out.println();
         System.out.println("Overzicht van de was:");
-        SingletonWasmand.getInstance("n.v.t.").toonInhoud();
+        MultitonWasmand.toonAlleManden();
     }
 }
+
