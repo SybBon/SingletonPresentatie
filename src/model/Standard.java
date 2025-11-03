@@ -5,4 +5,5 @@ package model;
  * TODO
  */
 public class Standard {
+
 }
