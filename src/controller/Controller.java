@@ -13,25 +13,25 @@ import java.util.List;
  */
 public class Controller {
     public static void main(String[] args) {
-        System.out.println("=== Singleton Example ===");
+        System.out.println("=== Singleton voorbeeld ===");
         Singleton sharedBasket1 = Singleton.getWasmand();
         Singleton sharedBasket2 = Singleton.getWasmand();
         sharedBasket1.addLaundry("T-shirt");
         sharedBasket2.addLaundry("Jeans");
 
-        System.out.println("\n=== Multiton Example ===");
-        Multiton bedroomBasket = Multiton.getInstance("Bedroom");
-        Multiton bathroomBasket = Multiton.getInstance("Bathroom");
-        Multiton anotherBedroomBasket = Multiton.getInstance("Bedroom");
-        bedroomBasket.addLaundry("Socks");
-        bathroomBasket.addLaundry("Towel");
-        anotherBedroomBasket.addLaundry("Pajamas");
+        System.out.println("\n=== Multiton voorbeeld ===");
+        Multiton slaapkamerMand = Multiton.getInstance("Slaapkamer");
+        Multiton badkamerMand = Multiton.getInstance("Badkamer");
+        Multiton babykamerMand = Multiton.getInstance("Babykamer");
+        slaapkamerMand.addLaundry("Sokken");
+        badkamerMand.addLaundry("Handdoek");
+        babykamerMand.addLaundry("Pajamas");
 
-        System.out.println("\n=== Standard Example ===");
-        Standard aliceBasket = new Standard("Alice");
-        Standard bobBasket = new Standard("Bob");
-        aliceBasket.addLaundry("Dress");
-        bobBasket.addLaundry("Shirt");
+        System.out.println("\n=== Standard voorbeeld ===");
+        Standard mandVanAnne = new Standard("Anne");
+        Standard mandVanBob = new Standard("Bob");
+        mandVanAnne.addLaundry("Jurk");
+        mandVanBob.addLaundry("Shirt");
     }
 
 
