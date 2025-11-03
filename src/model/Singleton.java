@@ -5,7 +5,7 @@ package model;
  * TODO
  */
 public class Singleton {
-    private static Singleton instance;
+    private static Singleton washand;
     private int kledingStukken;
 
     // Private constructor prevents instantiation from other classes
@@ -14,11 +14,11 @@ public class Singleton {
     }
 
     // Public method to provide access to the single instance
-    public static Singleton getInstance() {
-        if (instance == null) {
-            instance = new Singleton();
+    public static Singleton getWashand() {
+        if (washand == null) {
+            washand = new Singleton();
         }
-        return instance;
+        return washand;
     }
 
     public void addLaundry(String item) {
