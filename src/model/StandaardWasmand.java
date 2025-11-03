@@ -4,8 +4,14 @@ import java.util.ArrayList;
 
 public class StandaardWasmand {
 
+
+    private String wasmandNaam;
     // lijst van was in wasmand
     private ArrayList<String> kledingstukken = new ArrayList<>();
+
+    public StandaardWasmand(String wasmandNaam) {
+        this.wasmandNaam = wasmandNaam;
+    }
 
     // doe was bij de was
     public void voegToe(String kledingstuk) {
@@ -15,5 +21,9 @@ public class StandaardWasmand {
     // toon inhoud van de wasmand
     public void toonInhoud() {
         System.out.println("Inhoud van de mand: " + kledingstukken);
+    }
+
+    public String getWasmandNaam() {
+        return wasmandNaam;
     }
 }
