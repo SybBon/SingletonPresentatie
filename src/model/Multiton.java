@@ -31,3 +31,4 @@ public class Multiton {
         kledingStukken++;
         System.out.println("Toegevoegd " + item + " aan de wasmand in " + room + ". Totaal items: " + kledingStukken);
     }
+}
