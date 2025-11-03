@@ -4,9 +4,7 @@ import java.util.ArrayList;
 
 public class StandaardWasmand {
 
-
     private String wasmandNaam;
-    // lijst van was in wasmand
     private ArrayList<String> kledingstukken = new ArrayList<>();
 
     public StandaardWasmand(String wasmandNaam) {
@@ -22,6 +20,7 @@ public class StandaardWasmand {
     public void toonInhoud() {
         System.out.println("Inhoud van de mand: " + kledingstukken);
     }
+
 
     public String getWasmandNaam() {
         return wasmandNaam;
