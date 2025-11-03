@@ -11,24 +11,24 @@ import java.util.Map;
 public class Multiton {
     private static Map<String, Multiton> instances = new HashMap<>();
     private int kledingStukken;
-    private String room;
+    private String kamer;
 
     // Private constructor
-    private Multiton(String room) {
-        this.room = room;
+    private Multiton(String kamer) {
+        this.kamer = kamer;
         kledingStukken = 0;
     }
 
     // Static method to get instance per room
-    public static Multiton getInstance(String room) {
-        if (!instances.containsKey(room)) {
-            instances.put(room, new Multiton(room));
+    public static Multiton getInstance(String kamer) {
+        if (!instances.containsKey(kamer)) {
+            instances.put(kamer, new Multiton(kamer));
         }
-        return instances.get(room);
+        return instances.get(kamer);
     }
 
     public void addLaundry(String item) {
         kledingStukken++;
-        System.out.println("Toegevoegd " + item + " aan de wasmand in " + room + ". Totaal items: " + kledingStukken);
+        System.out.println("Toegevoegd " + item + " aan de wasmand in " + kamer + ". Totaal items: " + kledingStukken);
     }
 }

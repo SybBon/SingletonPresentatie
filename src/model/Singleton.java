@@ -8,12 +8,12 @@ public class Singleton {
     private static Singleton wasmand;
     private int kledingStukken;
 
-    // Private constructor prevents instantiation from other classes
+    // Private constructor
     private Singleton() {
         kledingStukken = 0;
     }
 
-    // Public method to provide access to the single instance
+    // Public method to provide access
     public static Singleton getWasmand() {
         if (wasmand == null) {
             wasmand = new Singleton();
