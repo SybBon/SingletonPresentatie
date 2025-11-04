@@ -22,8 +22,11 @@ public class MultitonWasmandController {
 
             System.out.print("Kledingstuk: ");
             String kledingstuk = toetsenbord.next();
+
             MultitonWasmand wasmand = MultitonWasmand.getInstance(naam);
-            wasmand.voegToe(kledingstuk);
+            if (wasmand != null) {
+                wasmand.voegToe(kledingstuk);
+            }
         }
         System.out.println();
         System.out.println("Overzicht van de was:");
